@@ -1,8 +1,8 @@
-#ifndef KAREN_HPP
-#define KAREN_HPP
+#ifndef HARL_HPP
+#define HARL_HPP
 #include <iostream>
 #include <unordered_map>
-class Karen
+class Harl
 {
     private:
         std::unordered_map<std::string, void (*)()> map_functions;
@@ -13,6 +13,6 @@ class Karen
         static void error( void );
     public:
         void complain( std::string level );
-        Karen( void );
+        Harl( void );
 };
 #endif

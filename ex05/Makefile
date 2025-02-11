@@ -1,7 +1,7 @@
 CPP = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJ_DIR = obj
-SRCS = main.cpp Karen.cpp
+SRCS = main.cpp Harl.cpp
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
 NAME = harl
 

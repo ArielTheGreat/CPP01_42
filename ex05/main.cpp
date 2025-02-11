@@ -1,7 +1,10 @@
-#include "Karen.hpp"
+#include "Harl.hpp"
 int main()
 {
-    Karen karencita;
-    karencita.complain("ERROR");
+    Harl harlito;
+    harlito.complain("ERROR");
+    harlito.complain("WARNING");
+    harlito.complain("INFO");
+    harlito.complain("DEBUG");
     return 0;
 }
