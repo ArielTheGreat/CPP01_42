@@ -2,7 +2,6 @@
 
 Zombie* newZombie( std::string name )
 {
-    Zombie* zombieObj = new Zombie;
-    zombieObj->setName( name );
+    Zombie* zombieObj = new Zombie(name);
     return zombieObj;
 }

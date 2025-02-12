@@ -9,9 +9,9 @@
             std::string name;
         public:
             void announce(void);
-            Zombie(){};
+            Zombie() : name("Unnamed") {}
+            Zombie(std::string _name) : name(_name){}
             ~Zombie();
-            void setName( std::string name );
     };
 
     Zombie* newZombie( std::string name );
