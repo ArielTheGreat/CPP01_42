@@ -6,5 +6,6 @@ int main()
     harlito.complain("WARNING");
     harlito.complain("INFO");
     harlito.complain("DEBUG");
+    harlito.complain("ALO");
     return 0;
 }

@@ -24,18 +24,21 @@ void Harl::error( void )
 
 void Harl::complain( std::string level )
 {
-    std::unordered_map<std::string, void (*)()>::iterator it = Harl::map_functions.find(level);
-    if(it != Harl::map_functions.end())
+    std::unordered_map<std::string, void (Harl::*)()>::iterator it = map_functions.find(level);
+    if (it != map_functions.end())
     {
-        void (*ptr)() = it->second;
-        ptr();
+        (this->*(it->second))();
+    }
+    else
+    {
+        std::cout << "Unknown complaint level: " << level << std::endl;
     }
 }
 
 Harl::Harl ()
 {
-    Harl::map_functions["DEBUG"] = Harl::debug;
-    Harl::map_functions["INFO"] = Harl::info;
-    Harl::map_functions["WARNING"] = Harl::warning;
-    Harl::map_functions["ERROR"] = Harl::error;
+    map_functions["DEBUG"] = &Harl::debug;
+    map_functions["INFO"] = &Harl::info;
+    map_functions["WARNING"] = &Harl::warning;
+    map_functions["ERROR"] = &Harl::error;
 }

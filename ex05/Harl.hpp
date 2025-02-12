@@ -5,12 +5,12 @@
 class Harl
 {
     private:
-        std::unordered_map<std::string, void (*)()> map_functions;
+        std::unordered_map<std::string, void (Harl::*)()> map_functions;
 
-        static void debug( void );
-        static void info( void );
-        static void warning( void );
-        static void error( void );
+        void debug( void );
+        void info( void );
+        void warning( void );
+        void error( void );
     public:
         void complain( std::string level );
         Harl( void );
