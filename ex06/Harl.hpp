@@ -4,8 +4,8 @@
 #include <unordered_map>
 class Harl
 {
-    std::unordered_map<std::string, int> list;
     private:
+        std::unordered_map<std::string, int> list;
         void debug( void );
         void info( void );
         void warning( void );
