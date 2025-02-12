@@ -6,7 +6,7 @@ Zombie* zombieHorde( int N, std::string name )
     Zombie* list_zombies;
     int counter;
 
-    if (N < 0)
+    if (N <= 0)
 	{
 		std::cerr << "[Error]: N cannot be negative!" << std::endl;
 		return nullptr;
