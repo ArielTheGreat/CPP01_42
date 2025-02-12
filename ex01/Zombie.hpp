@@ -7,10 +7,10 @@
         private:
             std::string name;
         public:
-            void announce(void);
-            Zombie(){};
+            Zombie(const std::string& _name) : name(_name) {}
+            Zombie() : name("Unnamed") {}
             ~Zombie();
-            void setName( std::string name );
+            void announce(void);
     };
     Zombie* zombieHorde( int N, std::string name );
 #endif

@@ -9,8 +9,3 @@ Zombie::~Zombie()
 {
     std::cout << "Destructing " << Zombie::name << std::endl;
 }
-
-void  Zombie::setName( std::string nameZombie )
-{
-    this->name = nameZombie;
-}
