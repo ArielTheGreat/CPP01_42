@@ -10,7 +10,6 @@
             Weapon &weapon;
         public:
             void attack();
-            // HumanA(Weapon weapon);
             HumanA(std::string name, Weapon& weapon);
     };
 #endif

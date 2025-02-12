@@ -11,7 +11,6 @@
         public:
             void attack();
             void setWeapon(Weapon &newWeapon);
-            HumanB( void );
             HumanB( std::string name );
     };
 #endif
