@@ -13,11 +13,7 @@ void HumanB::attack()
     }
 }
 
-HumanB::HumanB( std::string name )
-{
-    this->name = name;
-    this->weapon = nullptr;
-}
+HumanB::HumanB(std::string _name) : name(_name), weapon(nullptr) {}
 
 void HumanB::setWeapon(Weapon& newWeapon)
 {
