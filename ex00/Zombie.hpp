@@ -15,5 +15,5 @@
     };
 
     Zombie* newZombie(const std::string& name );
-    void randomChump( std::string name );
+    void randomChump(const std::string& name );
 #endif
