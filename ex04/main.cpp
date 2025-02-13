@@ -1,41 +1,18 @@
-// chicken replaced by beef
+#include "FileReplace.hpp"
 #include <iostream>
-#include <fstream>
-#include <string>
 
-int main()
+int main(int argc, char* argv[])
 {
-    std::string filename = "receipt.txt";
-    std::ifstream file_reader(filename);
-    std::ofstream new_file("receipt.replace");
-    std::string str;
-    std::string str2("chicken");
-    std::string str_replace("beef");
-    char newline = '\n';
-
-    if (file_reader.is_open())
+    if (argc != 4)
     {
-        while(file_reader.good())
-        {
-            std::getline(file_reader, str);
-            std::size_t position = str.find(str2);
-            while(position != std::string::npos)
-            {
-                str.insert(position,str_replace);
-                str.erase(position+str_replace.length(), str2.length());
-                position = str.find(str2, position + str_replace.length() + 2);
-            }
-            if (new_file.is_open())
-            {
-                new_file.write((const char *)&str.front(),str.length());
-                new_file.write((const char *)&newline,1);
-            }
-            std::cout << str << std::endl;
-        }
+        std::cerr << "Usage: " << argv[0] << " <filename> <s1> <s2>" << std::endl;
+        return 1;
     }
+    std::string filename = argv[1];
+    std::string s1 = argv[2];
+    std::string s2 = argv[3];
 
-    file_reader.close();
-    new_file.close();
+    FileReplace::replaceInFile(filename, s1, s2);
 
     return 0;
 }
