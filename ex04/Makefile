@@ -1,9 +1,9 @@
 CPP = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJ_DIR = obj
-SRCS = main.cpp
+SRCS = main.cpp FileReplace.cpp
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
-NAME = weapon
+NAME = replace
 
 all: $(NAME)
 
