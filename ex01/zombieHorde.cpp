@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Zombie.hpp"
 
 Zombie* zombieHorde( int N, std::string name )
@@ -8,9 +7,10 @@ Zombie* zombieHorde( int N, std::string name )
 		std::cerr << "[Error]: N cannot be negative!" << std::endl;
 		return nullptr;
 	}
-    Zombie* list_zombies = new Zombie[N];
-    for (int i = 0; i < N; i++) {
-        new (&list_zombies[i]) Zombie(name);
+    Zombie* horde = new Zombie[N];
+    for (int i = 0; i < N; i++)
+    {
+        new (&horde[i]) Zombie(name);
     }
-    return list_zombies;
+    return horde;
 }
